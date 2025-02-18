@@ -1,6 +1,6 @@
 <?php
 
-namespace ARCyberLab\ConsoleLog;
+namespace emsici\ConsoleLog;
 
 use Livewire\Component;
 
@@ -12,7 +12,7 @@ class ConsoleLog extends Component
         $instance = app(static::class);
 
         foreach ($messages as $message) {
-            $instance->dispatch('consoleLogLivewire', [$message]);
+            $instance->dispatch('LivewireConsoleLog', [$message]);
         }
     }
 }

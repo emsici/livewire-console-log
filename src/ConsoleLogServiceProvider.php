@@ -1,6 +1,6 @@
 <?php
 
-namespace ARCyberLab\ConsoleLog;
+namespace emsici\ConsoleLog;
 
 use Illuminate\Support\ServiceProvider;
 

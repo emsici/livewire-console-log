@@ -1,17 +1,20 @@
-<script>
-    document.addEventListener('livewire:load', function () {
-        window.livewire.on('consoleLogLivewire', (messages) => {
-            messages.forEach((message) => {
-                let logMessage = "";
-                let logStyles = [];
+    <script>
+            Livewire.on('consoleLogLivewire', (messages) => {
+                messages.forEach((message) => {
+                    let logMessage = "";
+                    let logStyles = [];
 
-                message.forEach((part) => {
-                    logMessage += `%c${part.text} `;
-                    logStyles.push(part.style);
+                    if (Array.isArray(message)) {
+                        message.forEach((part) => {
+                            logMessage += `%c${part[0].text} `;
+                            logStyles.push(part[0].style);
+                        });
+
+                        console.log(logMessage.trim(), ...logStyles);
+                    } else {
+                        console.log('Message format is incorrect');
+                    }
                 });
-
-                console.log(logMessage.trim(), ...logStyles);
             });
-        });
-    });
-</script>
+
+    </script>

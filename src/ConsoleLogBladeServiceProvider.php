@@ -1,6 +1,6 @@
 <?php
 
-namespace ARCyberLab\ConsoleLog;
+namespace emsici\ConsoleLog;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
@@ -9,7 +9,7 @@ class ConsoleLogBladeServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        Blade::directive('livewireConsoleLogs', function () {
+        Blade::directive('LivewireConsoleLog', function () {
             return "<?php echo view('console-log::console-log'); ?>";
         });
 
