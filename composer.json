@@ -1,0 +1,26 @@
+{
+    "name": "emsici/console-log",
+    "description": "Laravel package to log messages to the browser console",
+    "authors": [
+        {
+            "name": "Alin",
+            "email": "alin@ar-cyber-lab.ro"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "livewire/livewire": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ARCyberLab\\ConsoleLog\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ARCyberLab\\ConsoleLog\\ConsoleLogServiceProvider"
+            ]
+        }
+    }
+}
