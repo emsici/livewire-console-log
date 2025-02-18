@@ -13,14 +13,14 @@
     },
     "autoload": {
         "psr-4": {
-            "ARCyberLab\\ConsoleLog\\": "src/"
+            "emsici\\ConsoleLog\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ARCyberLab\\ConsoleLog\\ConsoleLogServiceProvider",
-                "ARCyberLab\\ConsoleLog\\ConsoleLogBladeServiceProvider"
+                "emsici\\ConsoleLog\\ConsoleLogServiceProvider",
+                "emsici\\ConsoleLog\\ConsoleLogBladeServiceProvider"
             ]
         }
     }
