@@ -15,7 +15,7 @@ class ConsoleLogBladeServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::directive('livewireConsoleLogs', function () {
-            return "<?php echo view('console-log::scripts'); ?>";
+            return "<?php echo view('console-log::console-log'); ?>";
         });
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'console-log');
