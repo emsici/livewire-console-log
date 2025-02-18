@@ -11,7 +11,7 @@ class ConsoleLog extends Component
         foreach ($messages as $message) {
             $msg = $message[0];
             $css = isset($message[1]) ? $message[1] : '';
-            self::dispatchBrowserEvent('consoleLog', [['application' => 'MyApp', 'version' => '1.0', 'module' => $msg, 'style' => $css]]);
+            self::emit('consoleLog', [['application' => 'MyApp', 'version' => '1.0', 'module' => $msg, 'style' => $css]]);
         }
     }
 }
