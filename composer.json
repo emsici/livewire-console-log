@@ -19,7 +19,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ARCyberLab\\ConsoleLog\\ConsoleLogServiceProvider"
+                "ARCyberLab\\ConsoleLog\\ConsoleLogServiceProvider",
+                "ARCyberLab\\ConsoleLog\\ConsoleLogBladeServiceProvider"
             ]
         }
     }
