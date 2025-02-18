@@ -12,7 +12,7 @@ class ConsoleLog extends Component
         $instance = app(static::class);
 
         foreach ($messages as $message) {
-            $instance->dispatch('LivewireConsoleLog', [$message]);
+            $instance->dispatch('LivewireConsoleLog', ['messages' => $message]);
         }
     }
 }

@@ -1,5 +1,7 @@
-    <script>
-            Livewire.on('consoleLogLivewire', (messages) => {
+<script>
+        document.addEventListener('livewire:load', function () {
+            Livewire.on('LivewireConsoleLog', (event) => {
+                let messages = event.detail.messages;
                 messages.forEach((message) => {
                     let logMessage = "";
                     let logStyles = [];
@@ -16,5 +18,5 @@
                     }
                 });
             });
-
+        });
     </script>
