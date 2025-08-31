@@ -10,25 +10,34 @@ Laravel package to log messages to the browser console with style!
     composer require emsici/console-log:dev-main
     ```
 
-2. Add the service provider to your `config/app.php` file:
+2. The service providers are auto-discovered. If you have disabled package discovery, add the providers to your `config/app.php` file:
 
     ```php
     'providers' => [
         // Other Service Providers
-
-        ARCyberLab\ConsoleLog\ConsoleLogServiceProvider::class,
+        emsici\ConsoleLog\ConsoleLogServiceProvider::class,
+        emsici\ConsoleLog\ConsoleLogBladeServiceProvider::class,
     ],
     ```
 
-
 ## Usage
 
-To log messages to the browser console with style, use the `ConsoleLog::log` method in your Livewire components:
+Log styled messages to the browser console from your Livewire components:
 
 ```php
-use ARCyberLab\ConsoleLog\ConsoleLog;
+use emsici\ConsoleLog\ConsoleLog;
 
 ConsoleLog::log(
-    ['Message 1', 'color: red; font-weight: bold;'], 
+    ['Message 1', 'color: red; font-weight: bold;'],
     ['Message 2', 'color: blue;']
 );
+```
+
+Include the Blade directive in your layout to load the required script:
+
+```blade
+@LivewireConsoleLog
+```
+
+This directive registers a listener that outputs the messages in the browser console with the provided styles.
+
