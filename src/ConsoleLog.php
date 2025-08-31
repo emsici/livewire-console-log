@@ -6,13 +6,9 @@ use Livewire\Component;
 
 class ConsoleLog extends Component
 {
-    public static function send(array ...$messages)
+    public static function log(array ...$messages): void
     {
-        // Instanțierea unui obiect al clasei
         $instance = app(static::class);
-
-        foreach ($messages as $message) {
-            $instance->dispatch('LivewireConsoleLog', ['messages' => $message]);
-        }
+        $instance->dispatch('LivewireConsoleLog', ['messages' => $messages]);
     }
 }
