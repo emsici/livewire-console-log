@@ -13,14 +13,14 @@
     },
     "autoload": {
         "psr-4": {
-            "emsici\\ConsoleLog\\": "src/"
+            "Emsici\\ConsoleLog\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "emsici\\ConsoleLog\\ConsoleLogServiceProvider",
-                "emsici\\ConsoleLog\\ConsoleLogBladeServiceProvider"
+                "Emsici\\ConsoleLog\\ConsoleLogServiceProvider",
+                "Emsici\\ConsoleLog\\ConsoleLogBladeServiceProvider"
             ]
         }
     }

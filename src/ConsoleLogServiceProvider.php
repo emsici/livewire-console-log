@@ -1,6 +1,6 @@
 <?php
 
-namespace emsici\ConsoleLog;
+namespace Emsici\ConsoleLog;
 
 use Illuminate\Support\ServiceProvider;
 
